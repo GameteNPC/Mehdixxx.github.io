@@ -87,3 +87,64 @@ footer {
     padding: 30px;
     text-align: center;
 }
+/* Animation d’apparition */
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Menu burger */
+.burger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        padding: 20px;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+/* Effet dynamique sur les cartes */
+.skill-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    from { width: 0; height: 0; opacity: 1; }
+    to { width: 300px; height: 300px; opacity: 0; }
+}
