@@ -1,111 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Mehdi</title>
-  <meta name="description" content="Portfolio de Mehdi — alternant DevOps côté dev. Projets, compétences et contact." />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio BTS SIO – Mehdi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <h1 class="brand">Mehdi<span class="dot">.</span></h1>
-      <nav class="nav">
-        <a href="#about">À propos</a>
-        <a href="#skills">Compétences</a>
-        <a href="#projects">Projets</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section id="hero" class="hero">
-      <div>
-        <h2>Alternant DevOps côté dev</h2>
-        <p>Je conçois et automatise des pipelines, développe des outils d'infrastructure et améliore la fiabilité des plateformes.</p>
-        <a class="cta" href="#projects">Voir mes projets</a>
-      </div>
-      <div class="hero-card">
-        <p><strong>Mehdi</strong></p>
-        <p>Alternant DevOps côté dev</p>
-      </div>
+    <header>
+        <nav>
+            <h1>Mehdi – BTS SIO</h1>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#bpce">BPCE-IT</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Bienvenue sur mon Portfolio</h2>
+        <p>Étudiant en BTS SIO et alternant chez BPCE-IT</p>
+        <button onclick="scrollToSection('about')">Découvrir</button>
     </section>
 
-    <section id="about" class="card">
-      <h3>À propos</h3>
-      <p>Actuellement en alternance en DevOps côté développement, je travaille sur l'automatisation CI/CD, l'infrastructure as code et l'observabilité. J'aime transformer des processus manuels en pipelines reproductibles et fiables.</p>
+    <section id="about">
+        <h2>À propos</h2>
+        <p>
+            Je m'appelle Mehdi, étudiant en BTS SIO et alternant chez BPCE-IT. 
+            Passionné par l’informatique, je développe mes compétences en développement, 
+            systèmes et réseaux selon les besoins de mon entreprise et de ma formation.
+        </p>
     </section>
 
-    <section id="skills" class="card">
-      <h3>Compétences</h3>
-      <ul class="skills-grid">
-        <li><strong>CI/CD</strong> GitHub Actions; Jenkins</li>
-        <li><strong>Conteneurs</strong> Docker; images optimisées</li>
-        <li><strong>Orchestration</strong> Kubernetes; Helm</li>
-        <li><strong>Infrastructure as Code</strong> Terraform; CloudFormation</li>
-        <li><strong>Cloud</strong> AWS; GCP (déploiement, IAM)</li>
-        <li><strong>Scripting</strong> Bash; Python</li>
-        <li><strong>Configuration</strong> Ansible</li>
-        <li><strong>Observabilité</strong> Prometheus; Grafana; logs centralisés</li>
-        <li><strong>Versioning</strong> Git; workflows GitOps</li>
-        <li><strong>Sécurité</strong> scans SAST/DAST; gestion secrets</li>
-      </ul>
+    <section id="skills">
+        <h2>Compétences</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML / CSS / JS</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Git / GitHub</div>
+            <div class="skill-card">Linux / Windows</div>
+            <div class="skill-card">SQL / BDD</div>
+            <div class="skill-card">Cybersécurité</div>
+        </div>
     </section>
 
-    <section id="projects" class="card">
-      <h3>Projets sélectionnés</h3>
-      <div class="projects-grid" id="projects-list">
-        <article class="project">
-          <h4>Pipeline CI/CD automatisé</h4>
-          <p>Pipeline GitHub Actions pour build, test, image Docker et déploiement sur Kubernetes.</p>
-          <p class="meta">Tech: GitHub Actions; Docker; K8s; Helm</p>
-        </article>
-
-        <article class="project">
-          <h4>Infrastructure as Code</h4>
-          <p>Modules Terraform pour provisionner réseau, clusters et services cloud de façon reproductible.</p>
-          <p class="meta">Tech: Terraform; AWS</p>
-        </article>
-
-        <article class="project">
-          <h4>Observabilité centralisée</h4>
-          <p>Stack Prometheus + Grafana + Fluentd pour métriques et logs, alerting configuré.</p>
-          <p class="meta">Tech: Prometheus; Grafana; Fluentd</p>
-        </article>
-      </div>
+    <section id="projects">
+        <h2>Projets</h2>
+        <div class="project">
+            <h3>Projet 1 – Application Web</h3>
+            <p>Développement d’une application web avec gestion des utilisateurs.</p>
+        </div>
+        <div class="project">
+            <h3>Projet 2 – Script d’automatisation</h3>
+            <p>Automatisation de tâches pour améliorer la productivité.</p>
+        </div>
     </section>
 
-    <section id="contact" class="card">
-      <h3>Contact</h3>
-      <p>Tu peux me contacter via le formulaire ci‑dessous. Pour l'envoi réel, connecte le formulaire à un service (Formspree, Netlify Forms) ou utilise une API backend.</p>
-      <form id="contact-form">
-        <label>
-          <span>Nom</span>
-          <input name="name" required />
-        </label>
-        <label>
-          <span>Email</span>
-          <input name="email" type="email" required />
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <button type="submit">Envoyer</button>
-        <p id="form-status" aria-live="polite"></p>
-      </form>
+    <section id="bpce">
+        <h2>Alternance – BPCE-IT</h2>
+        <p>
+            Au sein de BPCE-IT, je participe à des projets liés à la sécurité, 
+            au développement et à l’amélioration des systèmes internes.
+        </p>
     </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Mehdi — Alternant DevOps côté dev</p>
-      <p class="small">Site statique hébergé sur GitHub Pages</p>
-    </div>
-  </footer>
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p>Email : ton.email@example.com</p>
+        <p>LinkedIn : <a href="#">Ton profil</a></p>
+        <p>GitHub : <a href="#">Ton GitHub</a></p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
